@@ -1,13 +1,17 @@
 <template>
   <div>
-    <button class="button">{{ props.btnText }}</button>
+    <button @click="goLink(link)" class="button">{{ props.btnText }}</button>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  btnText: String
+  btnText: String,
+  link: String
 })
+const goLink = (link) => {
+  window.open(link, '_blank')
+}
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +29,7 @@ const props = defineProps({
   font-family: inherit;
   box-shadow: 0px 0px 2px #41bd85cc;
   color: #f9f9f9;
+  cursor: pointer;
 
   &:active {
     background-color: #3bd690d6;

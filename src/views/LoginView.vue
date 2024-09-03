@@ -18,7 +18,7 @@ const error = ref(false)
 const queryString = window.location.search
 
 const checkResponse = (res) => {
-  res.status >= 200 <= 300 ? router.push('/home') : (error.value = true)
+  res.status >= 200 <= 300 ? router.push('/') : (error.value = true)
 }
 
 const signin = () => {

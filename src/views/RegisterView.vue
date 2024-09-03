@@ -41,7 +41,7 @@ const error = ref(false)
 
 const checkResponse = (res) => {
   console.log(res.status)
-  res.status >= 200 <= 300 ? router.push('/home') : (error.value = true)
+  res.status >= 200 <= 300 ? router.push('/') : (error.value = true)
 }
 
 const signIn = () => {
