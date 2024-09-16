@@ -6,6 +6,7 @@
       <p class="time">{{ timeConvert(props.event.time) }}</p>
       <p class="description">{{ props.event.description }}</p>
       <ButtonDefault
+        :linking="true"
         :link="props.event.link"
         :btnText="'Перейти'"
         style="margin-top: 15px"
@@ -74,7 +75,7 @@ p {
   margin: 7px auto;
   text-align: left;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
 }
 .close {
   position: absolute;

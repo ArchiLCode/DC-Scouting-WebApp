@@ -4,7 +4,11 @@
     <div v-if="!error" class="loader"></div>
     <div class="err" v-if="error">
       <h3>Ошибка авторизации!</h3>
-      <ButtonDefault @click="signin" :btnText="'Регистрация'" />
+      <ButtonDefault
+        @click="signin"
+        :linking="false"
+        :btnText="'Регистрация'"
+      />
     </div>
   </div>
 </template>

@@ -1,16 +1,19 @@
 <template>
   <div>
-    <button @click="goLink(link)" class="button">{{ props.btnText }}</button>
+    <button @click="goLink(link)" class="button">
+      {{ props.btnText }}
+    </button>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
   btnText: String,
-  link: String
+  link: String,
+  linking: Boolean
 })
 const goLink = (link) => {
-  window.open(link, '_blank')
+  if (props.linking) window.open(link, '_blank')
 }
 </script>
 
